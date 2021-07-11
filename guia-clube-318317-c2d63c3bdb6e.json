@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "guia-clube-318317",
+    "private_key_id": "c2d63c3bdb6e5a87f7028a91468b2ffafa833527",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDFedYpU7Ui4eu5\nD8tpOMd/CDikBZh5QhO/eUPHiS5I/+oPzpnaHOnPpPDKObWddgnK6KvFLdNz5v+I\nZlANwV+84JlRgeUZ2GDX4CKq+IA1UIaaw4WthbXsjnML4YNFDuK2WELNnQkpdtgV\n2vKIGJp3euULXEptGDLVkGqG/uTNjiEYmXewo22J0JHZmgHuLqM5ysb0+MltxH00\nDyB7IxjYEtPELuQk1RT8eofLkRKvGjmhiFrqv4KlyVpwjoo3Tnn6gEWd+dvBOAFE\nXB2aaxlsB+PDxGX6b2JGyUMQXAR5sUfsmmPdZ2tjTSt/WxWjLwcd5eAdHaDSef3b\nDHnj0pwTAgMBAAECggEAG0Q0XuZw900MeDQHGRM+8HpZH8SqBewqv+BljHKTkn7L\neb1EHwqo+gPDP5jyS7iVp4+yz/oA3VsC43mFCjEuH+0/HjL6SDRJQuVuw/6l7Tae\nL1ZZ6dixguU0W2qa7nkcsqLDLpLFRhVjxrjBjisfgOnWIFhw6llSA4z6OIOPYhZE\nZW5O+J3SvBcfDN8yV+0jly5IDhkYuoLWyDsSj7pbu9EXelZKSbdo0T7dbHTYVDHT\nOQtKcPC2Im2AHO5QoFjvolJ3EJr7Ccu6i+NJ4naSw1grleguim4uG3zeG8umEtaF\nT9vcoBKGn3XAiCGtk7V6NGhs/pCeJzrBGGVOtDD5iQKBgQD6gHGgUvhk6vuMHXpv\nt6jx9umE4Ssulm1UKtxbxIXak/HgiveWmyIOFli5qnT+0hSoaSpPbgix4HnuMmzL\nNwbLFY9EX9DPT054QnqRfAKBbz/k7O7cQr0eb9EdgJdaet/nRSgnFYIJFf37t5hd\nHBnHvjM4dF2ig00bD4Ew3FRU/QKBgQDJz3GGxMOi6zhnFRb2+t9UhCZHskgis+7f\nns1aZ1GGZtiTKleCC3Kfc13nRTqb6S6pU8tm4xCFtlrdeh+qRhW5CxL4f8O48B9V\neRn+P9W7UxGjLRHlpOQgNARoa9/iFN4an+NFsbZKADxRMdDC17zJLgCG7Wv6lEqc\nJlEPjqyKTwKBgGasquYZ2/IRVpVxp7OOxdKXb9OlLzvjMGClSLjcbjjPFv8ANscm\nQukfQ7KmKVog5ZK5uDviT/IInjGBvZH1tfUbmyNdWor+aJ1mMjLbb3N6E+hTLPxe\n5oFJN58uC9tsLcXvVKvgZvIub3HzKKJRWEfEr93d5FsuEjabPkq2pGJJAoGARN6L\nEn/Bd66n792tmZlhb3ktixgXL+iRozSRRcGue5xLWmV/uXxooGuBZzQj3SMFbnmP\nF0xzzf2+IojTl4sVTLGvxqfrRgiD2Opb6X0lVijyAuqVifXsd+TogC4YGBIg/ZsE\ntzr/R1+vNdI3ONbgsRMG0QTi7X9/uqwEy7dXwFcCgYA1DcsbQtNxRS4fyhJhMaSg\n9e13BuvTgZAb5ARK2ypPS4Ya9iwRhS1zuztkqLjrG2i6QcJka4V06gsILqWFPRbZ\nd/NG40/+Ja1aohLfbxj4JpibjVIAeGRFy/+8084KvzYfYh0b6O+RWfiYXb1wJGhh\nZu/9uWbwM6rAinMRhQ8qTQ==\n-----END PRIVATE KEY-----\n",
+    "client_email": "guia-clube-318317@appspot.gserviceaccount.com",
+    "client_id": "113226431042261582148",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/guia-clube-318317%40appspot.gserviceaccount.com"
+}
