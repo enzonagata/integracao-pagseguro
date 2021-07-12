@@ -1,0 +1,21 @@
+{
+    "preApprovalRequest":
+    {
+        "reference": "plan12021",
+        "preApproval": {
+            "name": "Plano 1",
+            "charge": "AUTO",
+            "period": "MONTHLY",
+            "amountPerPayment": 100.0,
+            "trialPeriodDuration": 30,
+            "details": "Primeiro plano de teste",
+            "expiration": {
+                "value": 2,
+                "unit": "YEARS"
+            }
+        },
+        "receiver":{
+            "email":"enzo_nagata@hotmail.com"
+        }       
+    }
+}

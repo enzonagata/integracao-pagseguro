@@ -6,7 +6,7 @@ export class PagSeguroController {
   constructor(private readonly appService: PagSeguroService) {}
 
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  async getHello(): Promise<boolean> {
+    return await this.appService.getHello();
   }
 }
