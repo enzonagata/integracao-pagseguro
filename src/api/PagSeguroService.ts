@@ -1,36 +1,29 @@
 import { HttpException, Injectable } from '@nestjs/common';
+import { StatusPlanDTO } from './dtos/StatusPlanDTO';
 import { PagSeguroProvider } from './providers/PagSeguroProvider';
 
 @Injectable()
 export class PagSeguroService {
   constructor(public pagSeguroProvider: PagSeguroProvider) {}
-  async getHello(): Promise<boolean> {
+
+  async createPlan(payload: string): Promise<boolean> {
     try {
-      const plan = await this.pagSeguroProvider.createPlan({
-        preApprovalRequest: {
-          reference: 'plan12021222',
-          preApproval: {
-            name: 'Plano 3',
-            charge: 'AUTO',
-            period: 'MONTHLY',
-            amountPerPayment: 100.0,
-            trialPeriodDuration: 30,
-            details: 'Primeiro plano de teste',
-            expiration: {
-              value: 2,
-              unit: 'YEARS',
-            },
-          },
-          receiver: {
-            email: 'enzo_nagata@hotmail.com',
-          },
-        },
-      });
-      console.log(plan);
+      const plan = await this.pagSeguroProvider.createPlan(payload);
+      // TODO: Pega o preApprovalRequest code para salvar no banco de dados
+      // TODO: Salvar no firestores, os dados do pagSeguro junto com as descrições dos planos
     } catch (e) {
       throw new HttpException(e.response.data, e.response.status);
     }
-
     return true;
+  }
+
+  async statusPlan(payload: StatusPlanDTO): Promise<void> {
+    try {
+      const status = await this.pagSeguroProvider.statusPlan(payload);
+      // TODO: Pega o preApprovalRequest code para salvar no banco de dados
+      // TODO: Salvar no firestores, os dados do pagSeguro junto com as descrições dos planos
+    } catch (e) {
+      throw new HttpException(e.response.data, e.response.status);
+    }
   }
 }
