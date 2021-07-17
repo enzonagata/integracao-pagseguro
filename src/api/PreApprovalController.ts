@@ -1,9 +1,9 @@
 import { Body, Controller, Post, Put } from '@nestjs/common';
-import { StatusPlanDTO } from './dtos/StatusPlanDTO';
-import { PagSeguroService } from './PagSeguroService';
+import { StatusPlanDTO } from './dtos/PreApproval/StatusPlanDTO';
+import { PagSeguroService } from './PreApprovalService';
 
-@Controller('pagseguro')
-export class PagSeguroController {
+@Controller('preapproval')
+export class PreApprovalController {
   constructor(private readonly pagSeguroService: PagSeguroService) {}
 
   @Post('plan/create')
