@@ -2,7 +2,7 @@ import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { PreApprovalController } from './api/PreApprovalController';
-import { PagSeguroService } from './api/PreApprovalService';
+import { PreApprovalService } from './api/service/PreApprovalService';
 import { PreApprovalProvider } from './api/providers/PreApprovalProvider';
 
 @Module({
@@ -14,6 +14,6 @@ import { PreApprovalProvider } from './api/providers/PreApprovalProvider';
     HttpModule,
   ],
   controllers: [PreApprovalController],
-  providers: [PagSeguroService, PreApprovalProvider],
+  providers: [PreApprovalService, PreApprovalProvider],
 })
 export class AppModule {}

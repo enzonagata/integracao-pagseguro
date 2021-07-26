@@ -3,7 +3,9 @@ import { Injectable } from '@nestjs/common';
 import { AxiosResponse } from 'axios';
 import { toXML } from 'jstoxml';
 import { lastValueFrom } from 'rxjs';
+import { JoiningPlanDTO } from '../dtos/PreApproval/JoiningPlan/JoiningPlanDTO';
 import { StatusPlanDTO } from '../dtos/PreApproval/StatusPlanDTO';
+import { PreApprovalResponseCodeModel } from '../models/PreApprovalCodeResponseModel';
 
 @Injectable()
 export class PreApprovalProvider {
@@ -54,16 +56,16 @@ export class PreApprovalProvider {
   }
 
   /**
-   * @param {StatusPlanDTO} payload
+   * @param {JoiningPlanDTO} payload
    * @description Adesao de plano
    */
-  async joiningPlan(payload: StatusPlanDTO): Promise<AxiosResponse<any>> {
+  async joiningPlan(
+    payload: JoiningPlanDTO,
+  ): Promise<AxiosResponse<PreApprovalResponseCodeModel>> {
     const endPoint = `pre-approvals`;
-    const { status } = payload;
-    const newPayload = { status };
-    const obs = this.httpService.put(
+    const obs = this.httpService.post(
       `${this.urlProvider}${endPoint}?email=${this.email}&token=${this.token}`,
-      newPayload,
+      payload,
       {
         headers: {
           Accept: 'application/vnd.pagseguro.com.br.v3+xml;charset=ISO-8859-1',

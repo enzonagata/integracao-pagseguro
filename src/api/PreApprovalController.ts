@@ -1,18 +1,27 @@
 import { Body, Controller, Post, Put } from '@nestjs/common';
+import { JoiningPlanDTO } from './dtos/PreApproval/JoiningPlan/JoiningPlanDTO';
 import { StatusPlanDTO } from './dtos/PreApproval/StatusPlanDTO';
-import { PagSeguroService } from './PreApprovalService';
+import { PreApprovalResponseCodeModel } from './models/PreApprovalCodeResponseModel';
+import { PreApprovalService } from './service/PreApprovalService';
 
 @Controller('preapproval')
 export class PreApprovalController {
-  constructor(private readonly pagSeguroService: PagSeguroService) {}
+  constructor(private readonly preApprovalService: PreApprovalService) {}
 
   @Post('plan/create')
   async createPlan(@Body() payload: string): Promise<boolean> {
-    return await this.pagSeguroService.createPlan(payload);
+    return await this.preApprovalService.createPlan(payload);
   }
 
   @Put('plan/status')
   async statusPlan(@Body() payload: StatusPlanDTO) {
-    return await this.pagSeguroService.statusPlan(payload);
+    return await this.preApprovalService.statusPlan(payload);
+  }
+
+  @Post('plan/join')
+  async joiningPlan(
+    @Body() payload: JoiningPlanDTO,
+  ): Promise<PreApprovalResponseCodeModel> {
+    return await this.preApprovalService.joinPlan(payload);
   }
 }
