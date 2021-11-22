@@ -1,8 +1,9 @@
+import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { PagSeguroController } from './api/PagSeguroController';
-import { PagSeguroService } from './api/PagSeguroService';
-import { PagSeguroProvider } from './api/providers/PagSeguroProvider';
+import { PreApprovalController } from './api/PreApprovalController';
+import { PreApprovalService } from './api/service/PreApprovalService';
+import { PreApprovalProvider } from './api/providers/PreApprovalProvider';
 
 @Module({
   imports: [
@@ -10,8 +11,9 @@ import { PagSeguroProvider } from './api/providers/PagSeguroProvider';
       envFilePath: `./config/${process.env.NODE_ENV || 'dev'}.env`,
       isGlobal: true,
     }),
+    HttpModule,
   ],
-  controllers: [PagSeguroController],
-  providers: [PagSeguroService, PagSeguroProvider],
+  controllers: [PreApprovalController],
+  providers: [PreApprovalService, PreApprovalProvider],
 })
 export class AppModule {}
